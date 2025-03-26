@@ -1,4 +1,8 @@
+import { useState } from 'react'
 import { Routes, Route } from 'react-router';
+
+import { UserContext } from './context/UserContext';
+
 import Home from './components/home/Home';
 import Header from './components/header/Header';
 import Login from './components/login/Login';
@@ -7,9 +11,19 @@ import Logout from './components/logout/Logout';
 import './App.css'
 
 function App() {
+  const [authData, setAuthData] = useState({});
+
+  const userLoginHandler = (resultData) => {
+    setAuthData(resultData);
+  };
+
+  const userLogoutHandler = () => {
+    setAuthData({});
+  };
+
 
   return (
-    <>
+    < UserContext.Provider value={{ ...authData, userLoginHandler, userLogoutHandler }}>
       <div className="bg-white">
         <Header />
 
@@ -20,7 +34,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
         </Routes>
       </div>
-    </>
+      </UserContext.Provider>
   )
 }
 
