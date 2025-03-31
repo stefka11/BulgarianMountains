@@ -37,3 +37,14 @@ export const useCreateArticle = () => {
         create,
     }
 };
+
+export const useDeleteArticle = () => {
+    const { request } = useAuth();
+
+    const deleteArticle = (articleId) =>
+        request.delete(`${baseUrl}/${articleId}`);
+
+    return {
+        deleteArticle,
+    }
+};
