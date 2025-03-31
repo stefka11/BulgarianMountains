@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import request from "../utils/request";
-//import useAuth from "../hooks/useAuth";
+import useAuth from "../hooks/useAuth";
 
 const baseUrl = 'http://localhost:3030/data/articles';
 
@@ -13,4 +13,15 @@ export const useArticles = () => {
     }, []);
 
     return { articles };
+};
+
+export const useCreateArticle = () => {
+    const { request  } = useAuth();
+    console.log(request);
+    
+    const create = (articleData) =>
+        request.post(baseUrl, articleData);
+    return {
+        create,
+    }
 };

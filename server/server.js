@@ -1658,7 +1658,7 @@
                 region: "РИЛА",
                 opis:"Най-високият връх на Балканите",
                 kota: "42.18 сш; 23.58 ид",
-                img: "./images/Musala.jpg",
+                img: "/images/Musala.jpg",
                 description: 'Work from home accessories',
                 _createdOn: 1615545143015,
                 _id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
@@ -1669,7 +1669,7 @@
                 region: "РИЛА",
                 opis:"Св.Иван Рилски",
                 kota: "42.13 сш; 23.34 ид",
-                img: "./images/RilaManastir.jpg",
+                img: "/images/RilaManastir.jpg",
                 description: 'Journals and note-taking',
                 _createdOn: 1615545572296,
                 _id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
@@ -1680,7 +1680,7 @@
                 region: "ПИРИН",
                 opis:"Мраморният връх",
                 kota: "41.77 сш; 23.40 ид",
-                img: "./images/Vihren.jpg",
+                img: "/images/Vihren.jpg",
                 description: 'Daily commute essentials',
                 _createdOn: 1615546332126,
                 _id: "c7f51805-242b-45ed-ae3e-80b68605141b"
