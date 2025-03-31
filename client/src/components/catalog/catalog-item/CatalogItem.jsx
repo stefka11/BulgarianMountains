@@ -13,7 +13,7 @@ export default function CatalogItem({
                 <h6>{region}</h6>
                 <img src={img} width="600px" height="1200px"/>  
                 <h2>{title} - {opis}</h2>
-                <Link to={`/catalog/${_id}/details`} className="details-button">Виж по-вече...</Link>
+                <Link to={`/article/${_id}/details`} className="details-button">Виж по-вече...</Link>
             </div>
 
         </div>

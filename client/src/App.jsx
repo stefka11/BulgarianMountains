@@ -9,6 +9,7 @@ import Logout from './components/logout/Logout';
 import './App.css'
 import Catalog from './components/catalog/Catalog';
 import ArticleCreate from './components/article-create/ArticleCreate';
+import ArticleDetails from './components/article-details/ArticleDetails';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/logout" element={<Logout />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/article/create" element={<ArticleCreate />} />
+            <Route path="/article/:articleId/details" element={<ArticleDetails />} />
           </Routes>
         </main>
       </div>
