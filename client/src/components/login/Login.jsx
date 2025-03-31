@@ -12,10 +12,14 @@ export default function Login({}) {
         const values = Object.fromEntries(formData);  //Получаваме данните от формата
         console.log(values);
 
-        const authData = await login(values.email, values.password); //пращаме ги на сървъра с Хоока
+        if ((values.email !='') && (values.password !='')){
+            const authData = await login(values.email, values.password); //пращаме ги на сървъра с Хоока
         
-        userLoginHandler(authData);   //при успешно логване подаваме на onLogin-цялата информация за логнатия, и отива в App,js
-        navigate('/');  //връщаме се на игрите
+            userLoginHandler(authData);   //при успешно логване подаваме на onLogin-цялата информация за логнатия, и отива в App,js
+            navigate('/');  //връщаме се на katalog
+        } else {
+            navigate('/login');  //
+        }
     }
      const [_, loginAction, isPending] = useActionState(loginHandler, { email: '', password: '' });
     //console.log(values); action={loginAction}   <form id="login" className="mx-auto mt-16 max-w-xl sm:mt-20">
