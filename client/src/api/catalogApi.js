@@ -27,7 +27,6 @@ export const useArticle = (articleId) => {
 
 export const useCreateArticle = () => {
     const { request  } = useAuth();
-    //console.log(request);
     
     const create = (articleData) =>
         request.post(baseUrl, articleData);
