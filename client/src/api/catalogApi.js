@@ -16,8 +16,7 @@ export const useArticles = () => {
 };
 
 export const useArticle = (articleId) => {
-    const [article, setArticle] = useState([]);
-
+    const [article, setArticle] = useState({});
     useEffect(() => {
         request.get(`${baseUrl}/${articleId}`)
             .then(setArticle)
@@ -25,7 +24,6 @@ export const useArticle = (articleId) => {
 
     return { article };
 };
-
 
 export const useCreateArticle = () => {
     const { request  } = useAuth();
@@ -35,6 +33,16 @@ export const useCreateArticle = () => {
         request.post(baseUrl, articleData);
     return {
         create,
+    }
+};
+
+export const useEditArticle = () => {
+    const { request } = useAuth();
+
+    const edit = (articleId, articleData) =>
+        request.put(`${baseUrl}/${articleId}`, { ...articleData, _id:articleId });
+    return {
+        edit,
     }
 };
 

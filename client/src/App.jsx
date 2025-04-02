@@ -10,6 +10,7 @@ import './App.css'
 import Catalog from './components/catalog/Catalog';
 import ArticleCreate from './components/article-create/ArticleCreate';
 import ArticleDetails from './components/article-details/ArticleDetails';
+import ArticleEdit from './components/article-edit/ArticleEdit';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/article/create" element={<ArticleCreate />} />
             <Route path="/article/:articleId/details" element={<ArticleDetails />} />
+            <Route path="/article/:articleId/edit" element={<ArticleEdit />} />
           </Routes>
         </main>
       </div>
